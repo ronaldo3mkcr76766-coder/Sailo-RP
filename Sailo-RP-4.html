@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sailo RP</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    font-family: Tahoma, Arial, sans-serif;
+    background:
+      radial-gradient(circle at top, rgba(255,193,7,.14), transparent 35%),
+      #17130a;
+    color: #fff8df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .container {
+    width: min(900px, 100%);
+    text-align: center;
+  }
+  .hero {
+    padding: 42px 24px;
+    border: 1px solid rgba(245, 183, 40, .35);
+    border-radius: 24px;
+    background: rgba(35, 28, 12, .88);
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  }
+  .official-title {
+    margin-bottom: 24px;
+    color: #f5b728;
+    font-size: clamp(18px, 4.5vw, 28px);
+    font-weight: 800;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .logo {
+    font-size: clamp(42px, 9vw, 78px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #f5b728;
+    text-shadow: 0 0 28px rgba(245,183,40,.25);
+  }
+  .welcome {
+    max-width: 700px;
+    margin: 18px auto 0;
+    padding: 16px 20px;
+    color: #f3e4b8;
+    background: rgba(245,183,40,.07);
+    border: 1px solid rgba(245,183,40,.18);
+    border-radius: 14px;
+    line-height: 2;
+    font-size: 16px;
+  }
+  .subtitle {
+    margin-top: 12px;
+    color: #d8c58e;
+    font-size: 17px;
+  }
+  button {
+    margin-top: 28px;
+    border: 0;
+    border-radius: 14px;
+    padding: 15px 34px;
+    background: #c89216;
+    color: #17130a;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+    box-shadow: 0 8px 25px rgba(200,146,22,.25);
+  }
+  button:hover {
+    transform: translateY(-2px);
+    background: #e0aa27;
+  }
+  #rules {
+    display: none;
+    margin-top: 22px;
+    text-align: right;
+  }
+  .back-btn {
+    display: block;
+    margin: 0 auto 18px;
+    background: transparent;
+    color: #f5b728;
+    border: 1px solid #c89216;
+    box-shadow: none;
+  }
+  .back-btn:hover {
+    background: rgba(245,183,40,.1);
+  }
+  .rule-section {
+    background: rgba(35, 28, 12, .94);
+    border: 1px solid rgba(245,183,40,.3);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 18px;
+  }
+  h2 {
+    color: #f5b728;
+    margin-bottom: 12px;
+    font-size: 25px;
+  }
+  .intro {
+    color: #e5d39d;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  ol {
+    padding-right: 25px;
+  }
+  li {
+    padding: 9px 4px;
+    line-height: 1.8;
+    color: #fff8df;
+  }
+  .rp-basic-list li strong {
+    color: #f5b728;
+    font-size: 17px;
+  }
+  .note {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(245,183,40,.09);
+    color: #f5b728;
+    font-weight: bold;
+  }
+  footer {
+    margin-top: 20px;
+    color: #8f805b;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="official-title">الصفحة الرسمية الخاصة بقوانين سيرفر Sailo City :</div>
+      <div class="logo">Sailo RP</div>
+      <div class="welcome">
+        مرحباً بك في الصفحة الرسمية الخاصة بقوانين سيرفر Sailo City، لعرض جميع القوانين إضغط على زر "عرض القوانين"، يرجى قراءة القوانين جيدًا والإلتزام بها، بالتوفيق للجميع
+      </div>
+      <div class="subtitle">قوانين السيرفر — يرجى الالتزام بها</div>
+      <button id="showBtn" onclick="showRules()">عرض القوانين</button>
+    </section>
+
+    <section id="rules">
+      <button class="back-btn" onclick="goHome()">العودة للصفحة الرئيسية</button>
+      <div class="rule-section">
+        <h2>قوانين الديسكورد</h2>
+        <div class="intro">*يرجى الإلتزام بالقوانين*</div>
+        <ol>
+          <li>ممنوع السب والشتم</li>
+          <li>ممنوع السبام</li>
+          <li>ممنوع إستغلال الرتب</li>
+          <li>إحترام الآخرين</li>
+          <li>إحترام قرارات الإدارة</li>
+          <li>عدم إنتحال شخصية أي فرد من الإدارة (عقوبتها تصل إلى الباند)</li>
+          <li>ممنوع إرسال روابط خارجية</li>
+          <li>ممنوع الإستهزاء بالدين (أي إستهزاء ولو بسيط جدًا = باند نهائي)</li>
+          <li>ممنوع الإستهزاء بسيرفرات أُخرى</li>
+          <li>ممنوع التعديل على قرارات الإدارة</li>
+        </ol>
+      </div>
+
+      <div class="rule-section">
+        <h2>قوانين الرول بلاي</h2>
+        <ol>
+          <li>ممنوع رفع السلاح في المناطق الآمنة (المستشفى / معرض السيارات).</li>
+          <li>ممنوع خطف أي شخص بدون سبب واضح في الرول.</li>
+          <li>ممنوع مداهمة مركز الشرطة بدون الإعلان عن المداهمة.</li>
+          <li>ممنوع سرقة بنك أو بقالة بدون وجود رهينة.</li>
+          <li>ممنوع لأي شخص غير شرطي لبس ملابس الشرطة.</li>
+          <li>ممنوع الإعدام بدون سبب مقنع.</li>
+          <li>ممنوع الإعدام بدون الرجوع لطاقم الرقابة للتأكيد على الإعدام.</li>
+          <li>ممنوع منعًا باتًا الثغرات أو الغش أو الهاك داخل الرول بلاي.</li>
+        </ol>
+        <div class="note">ملحوظة : القوانين قابلة للزيادة ✓</div>
+      </div>
+
+      <div class="rule-section">
+        <h2>قوانين الـRP الأساسية</h2>
+        <ol class="rp-basic-list">
+          <li><strong>RDM — Random Deathmatch</strong><br>ممنوع قتل أي لاعب بدون سبب واضح أو سيناريو RP يبرر ذلك.</li>
+          <li><strong>VDM — Vehicle Deathmatch</strong><br>ممنوع استخدام المركبة لدهس أو قتل اللاعبين بدون سبب RP واضح.</li>
+          <li><strong>Fail RP — مخالفة الرول بلاي</strong><br>ممنوع القيام بتصرفات غير منطقية أو غير واقعية تخالف طبيعة الرول بلاي.</li>
+          <li><strong>Meta Gaming — استخدام المعلومات الخارجية</strong><br>ممنوع استخدام أي معلومات حصلت عليها خارج الرول بلاي والتصرف بناءً عليها داخله.</li>
+          <li><strong>Power Gaming — فرض الأفعال</strong><br>ممنوع إجبار لاعب آخر على نتيجة معينة أو تنفيذ فعل بدون إعطائه فرصة للتفاعل مع السيناريو.</li>
+          <li><strong>Fear RP — الخوف على الحياة</strong><br>يجب على اللاعب التصرف بشكل منطقي عند تعرض حياته للخطر وعدم تجاهل الخطر.</li>
+          <li><strong>NLR — New Life Rule</strong><br>بعد موت الشخصية، لا يجوز تذكر تفاصيل السيناريو السابق أو العودة إليه بهدف الانتقام.</li>
+          <li><strong>Combat Logging — الخروج أثناء السيناريو</strong><br>ممنوع الخروج من السيرفر أثناء سيناريو RP بهدف الهروب من الموقف أو تجنب نتائجه.</li>
+          <li><strong>Revenge RP — الانتقام</strong><br>ممنوع الانتقام من لاعب بسبب أحداث أو معلومات من حياة الشخصية السابقة.</li>
+          <li><strong>Cop Baiting — استفزاز الشرطة</strong><br>ممنوع استفزاز الشرطة أو استدراجها بدون سبب RP منطقي.</li>
+          <li><strong>Car Ramming — صدم اللاعبين</strong><br>ممنوع استخدام المركبة لصدم اللاعبين أو مركباتهم بشكل عشوائي وبدون سبب RP.</li>
+          <li><strong>Breaking Character — الخروج من الشخصية</strong><br>يجب الالتزام بالشخصية أثناء سيناريو RP وعدم الخروج منها بدون سبب ضروري.</li>
+          <li><strong>Safe Zone Abuse — استغلال المناطق الآمنة</strong><br>ممنوع استغلال المناطق الآمنة للهروب من سيناريو أو لتجنب نتائجه.</li>
+          <li><strong>Bug Abuse — استغلال الثغرات</strong><br>ممنوع استغلال أي Bug أو Glitch للحصول على أفضلية غير عادلة داخل السيرفر.</li>
+          <li><strong>Scenario Interference — تخريب السيناريوهات</strong><br>ممنوع التدخل في سيناريوهات اللاعبين الآخرين بدون سبب RP واضح.</li>
+          <li><strong>Realism — الواقعية</strong><br>يجب أن تكون جميع تصرفات الشخصية منطقية ومناسبة للموقف وطبيعة الرول بلاي.</li>
+        </ol>
+        <div class="note">ملحوظة: الإدارة لها الحق في اتخاذ الإجراء المناسب في الحالات التي تخالف روح وقواعد الرول بلاي، حتى لو لم تكن الحالة مذكورة حرفيًا ضمن القوانين.</div>
+      </div>
+    </section>
+
+    <footer>© Sailo RP — جميع الحقوق محفوظة</footer>
+  </main>
+
+<script>
+function showRules() {
+  const rules = document.getElementById("rules");
+  const btn = document.getElementById("showBtn");
+  rules.style.display = "block";
+  btn.style.display = "none";
+  document.querySelector(".hero").style.display = "none";
+  rules.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function goHome() {
+  const rules = document.getElementById("rules");
+  const btn = document.getElementById("showBtn");
+  rules.style.display = "none";
+  btn.style.display = "inline-block";
+  document.querySelector(".hero").style.display = "block";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+</body>
+</html>
